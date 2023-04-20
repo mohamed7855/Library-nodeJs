@@ -1,0 +1,2 @@
+User { name , email , password , age , phone , gender , address,...}
+book { name , author , price , #ofCopies ,...}

@@ -1,0 +1,12 @@
+git init
+git add .
+git commit -m "insert what u do before push...?"
+
+git remote add origin https://github.com/mohamed7855/API-nodeJs-Project.git
+git branch -M main
+git push -u origin main
+
+=========================================>
+git add .
+git commit -m "insert what u do before push...?"
+git push

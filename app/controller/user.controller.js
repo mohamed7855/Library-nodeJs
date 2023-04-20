@@ -23,7 +23,9 @@ class User {
 
   static editProfile = async (req, res) => {
     try {
-      const userData = await userModel.findById(req.params.id);
+      const {id}=req.params
+      console.log(id);
+      const userData = await userModel.findById(id);
       for (let key in req.body) {
         userData[key] = req.body[key];
       }

@@ -1,0 +1,624 @@
+{
+	"info": {
+		"_postman_id": "e1809358-82e5-4965-919d-ccaca90955d7",
+		"name": "ApiProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22317371"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Sign up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"muhammad\",\r\n    \"lastName\":\"shehata\",\r\n    \"email\":\"shehata@gmail.com\",\r\n    \"password\":\"Admin12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{user}}/Sign_up",
+							"host": [
+								"{{user}}"
+							],
+							"path": [
+								"Sign_up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"shehata@gmail.com\",\r\n    \"password\":\"Admin12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{user}}/Sign_in",
+							"host": [
+								"{{user}}"
+							],
+							"path": [
+								"Sign_in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userProfile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQxMGMzMGI4YWU1ODIwYTNkZDZiMGUiLCJpYXQiOjE2ODE5ODQ2MDN9.GuaCa_8p9FH3Rq0fj7_15EIypt7ujUzQ2MTCyzO9r_I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{user}}/64410c30b8ae5820a3dd6b0e",
+							"host": [
+								"{{user}}"
+							],
+							"path": [
+								"64410c30b8ae5820a3dd6b0e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editProfile",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQxMGMzMGI4YWU1ODIwYTNkZDZiMGUiLCJpYXQiOjE2ODE5ODQ2MDN9.GuaCa_8p9FH3Rq0fj7_15EIypt7ujUzQ2MTCyzO9r_I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"muhammad\",\r\n    \"lastName\":\"ahmad\",\r\n    \"email\":\"shehata@gmail.com\",\r\n    \"password\":\"Aa100100\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{user}}/64410c30b8ae5820a3dd6b0e",
+							"host": [
+								"{{user}}"
+							],
+							"path": [
+								"64410c30b8ae5820a3dd6b0e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign out",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQxMGMzMGI4YWU1ODIwYTNkZDZiMGUiLCJpYXQiOjE2ODE5ODQ2MDN9.GuaCa_8p9FH3Rq0fj7_15EIypt7ujUzQ2MTCyzO9r_I",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{user}}/Sign_out",
+							"host": [
+								"{{user}}"
+							],
+							"path": [
+								"Sign_out"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profileImg",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "img",
+									"type": "file",
+									"src": "/E:/photo/Anime/attack.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}user/updatePImg",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								"updatePImg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Boroow a book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNmZWJiNmNlNzIwMGM0MmVlNmIwZjciLCJpYXQiOjE2ODE5MTA3NjB9.u-9sllHegcABXLxc4Szbm4Hrltm2X38K2-qyymHpm_g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{book}}/borrow/6441102b59cfa18fe2859528",
+							"host": [
+								"{{book}}"
+							],
+							"path": [
+								"borrow",
+								"6441102b59cfa18fe2859528"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All events",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{event}}/all",
+							"host": [
+								"{{event}}"
+							],
+							"path": [
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "attend event",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{event}}/644113479122736a308a0b61/attend/643febb6ce7200c42ee6b0f7",
+							"host": [
+								"{{event}}"
+							],
+							"path": [
+								"644113479122736a308a0b61",
+								"attend",
+								"643febb6ce7200c42ee6b0f7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search in books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{book}}/search?q=b",
+							"host": [
+								"{{book}}"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search in events",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{event}}/search?q=event",
+							"host": [
+								"{{event}}"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "event"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "allUsers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{user}}/allUsers",
+							"host": [
+								"{{user}}"
+							],
+							"path": [
+								"allUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allBooks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{book}}/AllBooks",
+							"host": [
+								"{{book}}"
+							],
+							"path": [
+								"AllBooks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delAllBooks",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{book}}",
+							"host": [
+								"{{book}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addBook",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"title5\",\r\n    \"author\":\"author5\",\r\n    \"availableCopies\":5,\r\n    \"totalCopies\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{book}}/add",
+							"host": [
+								"{{book}}"
+							],
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editBook",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"title55\",\r\n    \"author\":\"author555\",\r\n    \"availableCopies\":5,\r\n    \"totalCopies\":9\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{book}}/643ddebfd3ffaf45f38b306a",
+							"host": [
+								"{{book}}"
+							],
+							"path": [
+								"643ddebfd3ffaf45f38b306a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delBook",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{book}}/643ddebfd3ffaf45f38b306a",
+							"host": [
+								"{{book}}"
+							],
+							"path": [
+								"643ddebfd3ffaf45f38b306a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Event",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"event 1\",\r\n    \"date\":\"1 - 1 2020\",\r\n    \"location\": \"2th cairo\",\r\n    \"description\":\"testttt\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{event}}/add",
+							"host": [
+								"{{event}}"
+							],
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Event",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{event}}/644113479122736a308a0b61",
+							"host": [
+								"{{event}}"
+							],
+							"path": [
+								"644113479122736a308a0b61"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update event",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"first after update\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{event}}/644113479122736a308a0b61",
+							"host": [
+								"{{event}}"
+							],
+							"path": [
+								"644113479122736a308a0b61"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "user",
+			"value": "http://localhost:3000/api/user",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNkYmEwOWNhZmJhNjczNDM3Y2MxZjIiLCJpYXQiOjE2ODE3Njk4NTB9.6t-FeLjRQMj02OMn3K62VGZJwjQo7PShv1es7Wpj8Hs",
+			"type": "string"
+		},
+		{
+			"key": "book",
+			"value": "lhttp://localhost:3000/api/book",
+			"type": "string"
+		},
+		{
+			"key": "event",
+			"value": "http://localhost:3000/api/event",
+			"type": "string"
+		},
+		{
+			"key": "adminToken",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQxMGZkZTU5Y2ZhMThmZTI4NTk1MTUiLCJpYXQiOjE2ODE5ODU1MjB9.cJLhDCBbwOMFrHk6J7V24UVoAg8sbtsuy5JzPXYWb88",
+			"type": "string"
+		},
+		{
+			"key": "userToken",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNmZWJiNmNlNzIwMGM0MmVlNmIwZjciLCJpYXQiOjE2ODE5MTA3NjB9.u-9sllHegcABXLxc4Szbm4Hrltm2X38K2-qyymHpm_g",
+			"type": "string"
+		}
+	]
+}
